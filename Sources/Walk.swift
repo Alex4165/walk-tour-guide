@@ -32,7 +32,7 @@ final class Walk {
             if !isSetUp { try setUp() }
 
             try engine.start()
-            player.scheduleBuffer(silence!, at: nil, options: .loops)
+            player.scheduleBuffer(silence!, at: nil, options: .loops, completionHandler: nil)
             player.play()
 
             MPNowPlayingInfoCenter.default().nowPlayingInfo = [MPMediaItemPropertyTitle: "Tour Guide walk"]
