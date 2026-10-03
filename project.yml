@@ -1,0 +1,22 @@
+name: TourGuide
+options:
+  bundleIdPrefix: dev.tourguide
+  deploymentTarget:
+    iOS: "17.0"
+targets:
+  TourGuide:
+    type: application
+    platform: iOS
+    sources: [Sources]
+    scheme: {}
+    info:
+      path: Sources/Info.plist
+      properties:
+        CFBundleDisplayName: Tour Guide
+        UILaunchScreen: {}
+        UIBackgroundModes: [audio]
+        NSMicrophoneUsageDescription: Records your question when you press the headphone button.
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: dev.tourguide.test
+        SWIFT_VERSION: "5.0"
